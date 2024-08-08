@@ -5,20 +5,26 @@ import Model from "./components/Model"
 import Features from "./components/Features"
 import HowItWorks from "./components/HowItWorks"
 import Footer from "./components/Footer"
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 const App = () => {
 
   return (
-    <main className="bg-black">
-      <Navbar />
-      <Hero />
-      <Highlights />
-      <Model />
-      <Features />
-      <HowItWorks />
-      <Footer />
-
-    </main>
+    <Router>
+      <Routes>
+        <Route path="/Apple-Iphone-15-website" element={
+          <main className="bg-black">
+            <Navbar />
+            <Hero />
+            <Highlights />
+            <Model />
+            <Features />
+            <HowItWorks />
+            <Footer />
+          </main>
+        } />
+      </Routes>
+    </Router> 
   )
 }
 
